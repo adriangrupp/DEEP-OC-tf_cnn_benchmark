@@ -1,0 +1,37 @@
+{
+    "title": "DEEP OC tf_cnn_benchmarks",
+    "summary": "Collection of scripts in order to perform hardware benchmarks using Convolutional Neural Networks and TensorFlow",
+    "description": [
+		"This is tf_cnn_benchmarks application using DEEPaaS API",
+           "",
+           "**References**\n",
+           ""
+	],
+    "keywords": [
+        "docker"
+    ],
+    "license": "MIT",
+    "date_creation": "YYYY-MM-DD",
+    "sources": {
+		"dockerfile_repo": "https://github.com/adriangrupp/DEEP-OC-tf_cnn_benchmarks",
+		"docker_registry_repo": "agrupp/deep-oc-tf_cnn_benchmarks",
+		"code": "http://github.com/adriangrupp/tf_cnn_benchmarks"
+	},
+    "continuous_integration": {
+        "build_status_badge": "https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-tf_cnn_benchmarks/master",
+        "build_status_url": "https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-tf_cnn_benchmarks/job/master"
+    },
+    "tosca": [
+        {
+            "title": "Mesos (CPU)",
+            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-mesos-webdav.yml",
+            "inputs": [
+                "rclone_conf",
+                "rclone_url",
+                "rclone_vendor",
+                "rclone_user",
+                "rclone_pass"
+            ]
+        }
+    ]
+}
